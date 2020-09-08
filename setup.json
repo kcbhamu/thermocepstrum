@@ -25,10 +25,7 @@
     "install_requires": [
         "numpy>=1.12.0",
         "scipy>=0.18.1",
-        "matplotlib>=2.2.0",
-        "markdown2>=2.0.0",
-        "pillow>=5.4.0",
-        "uncertainties>=2.4"
+        "matplotlib>=2.2.0"
     ],
     "extras_require": {
         "pre-commit": [
@@ -36,7 +33,7 @@
             "yapf==0.28.0"
         ],
         "notebook": [
-            "jupyter"
+            "jupyter==1.0.0"
         ],
         "tests": [
             "pytest>=4.0",
@@ -45,8 +42,7 @@
     },
     "entry_points": {
         "console_scripts": [
-            "thermocepstrum-analysis=thermocepstrum.analysis:main",
-            "thermocepstrum-gui=thermocepstrum_gui.main:run"
+            "thermocepstrum-analysis=thermocepstrum.analysis:main"
         ]
     },
     "gui_version" : "0.1.0b",
