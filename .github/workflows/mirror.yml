@@ -1,0 +1,20 @@
+name: Mirroring
+
+on: [push, delete]
+
+jobs:
+  to_mirror:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Mirror
+      uses: pixta-dev/repository-mirroring-action@v1
+      with:
+        target_repo_url:
+          giit@github.com:lorisercole/mirrortest.git
+        ssh_private_key:
+          ${{ secrets.SSH_PRIVATE_KEY }}
